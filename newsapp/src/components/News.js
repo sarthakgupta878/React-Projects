@@ -15,7 +15,7 @@ const News = (props) => {
     }
 
 
-    document.title = `NewsTak Latest News - ${capitalizeFirstLetter(props.category)}`
+    
 
     const updateNews = async () => {
         props.setProgress(10);
@@ -37,6 +37,7 @@ const News = (props) => {
     }
     useEffect(() => {
         updateNews();
+        document.title = `NewsTak Latest News - ${capitalizeFirstLetter(props.category)}`
         // eslint-disable-next-line
     }, [])
    
@@ -68,7 +69,7 @@ const News = (props) => {
     return (
         <>
 
-            <h1 style={{ margin: "30px 0px" }} className="text-center">NewsTak - Top Headlines from {capitalizeFirstLetter(props.category)}</h1>
+            <h1 style={{ margin: "30px 0px", marginTop:'90px' }} className="text-center">NewsTak - Top Headlines from {capitalizeFirstLetter(props.category)}</h1>
             {loading && <Spinner />}
           
             <InfiniteScroll
