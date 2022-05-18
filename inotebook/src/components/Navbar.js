@@ -1,14 +1,14 @@
 import React from 'react'
 import { Link, useLocation } from "react-router-dom"
-import { useEffect } from "react"
+// import { useEffect } from "react"
 
 
 
 const Navbar = () => {
   let location = useLocation();
-  useEffect(()=>{
+  // useEffect(()=>{
     // console.log(location.pathname)
-  },[location])
+  // },[location])
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
     <div className="container-fluid">
