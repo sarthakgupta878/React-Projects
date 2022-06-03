@@ -33,20 +33,12 @@ const NoteState = (props) => {
     });
 
   const json= await response.json();
-  console.log(json)
+  // console.log(json)
 
-    console.log("Adding Notes")
+    // console.log("Adding Notes")
 
     // console.log(title)
-    const note = {
-      "_id": "62838fc01394d69dbf99b40d",
-      "user": "62838eab1394d69dbf99b478",
-      "title": title,
-      "description": description,
-      "tag": tag,
-      "date": "2022-05-17T12:06:24.234Z",
-      "__v": 0
-    };
+    const note = json;
     setNotes(notes.concat(note))
   }
 
@@ -61,11 +53,11 @@ const NoteState = (props) => {
         "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI4MzhlYWIxMzk0ZDY5ZGJmOTliNDc4In0sImlhdCI6MTY1Mjc4ODkwN30.uozCYk4TjHDdJY6NFJMp18w83AAxrsTm3N8swC29UPw"
       }
     });
-    const json = response.json();
-    console.log(json)
+    const json = await response.json();
+    // console.log(json)
 
 
-    console.log("deleting " + id)
+    // console.log("deleting " + id)
 
     const newNotes = notes.filter((note) => { return note._id !== id })
     setNotes(newNotes)
@@ -86,6 +78,7 @@ const NoteState = (props) => {
 
   const json = await  response.json();
   console.log(json)
+
 
   let newNotes = JSON.parse(JSON.stringify(notes))
 
